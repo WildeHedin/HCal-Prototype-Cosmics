@@ -1,6 +1,23 @@
 # HCal-Prototype-Cosmics
+
+
 ## How to run
 ### Generate a LHE-file
 An LHE-file contains initial information about the cosmic muons. 
 
 Run: denv python3 lheData/cosmic_muon_lhe_generator_updated.py --numEvents=xx --detector=cosmicHcalPrototype
+
+A simplified description of the Cosmic Hcal prototype geometry has been added to cosmic_muon_lhe_generator_updated.py. 
+In addition, several if statesments has been updated because some muons were never assigned a vertex in the previous generators. 
+This is explained a bit better in my thesis. 
+
+### Generate simulation samples
+Create a folder that will store the ROOT files:
+
+mkdir cosmicEvents
+
+Run: just -f ~/ldmx-sw/justfile fire cosmic_config_hcalprototype.py lheData/name_of_file.lhe 
+
+### Analyze
+The file AnalyzeRecHits.py performs the analysis of the reconstructed data presented in my thesis, while the AnalyzeSimHits.py analyses the truth-level data. AnalyzeSimHits.py might have to be modified if future changes are made to the GDML file which describes the cosmic HCal geometry. 
+
