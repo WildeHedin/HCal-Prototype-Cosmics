@@ -298,7 +298,7 @@ def main( numEvents , numFiles , outDir , energyMin , energyMax , thetaMin , the
     #These values might need to be changed if mounting plates are added to the GDML file.
     #50 mm has been added to each side, otherwise the ROOT file obtained after simulating events showed some verticies inside the detector volume, which caused a noticeable supression of hits in the top layer.
     #The HCal prototype geometry is simplified as a box here. Should maybe be more detailed to avoid generation of muons that never intersect the actual detector volume.   
-    elif detector == 'hcalPrototypeCosmics':
+    elif detector == 'cosmicHcalPrototype':
         xmin = -1050.
         xmax = 1050.
         ymin = -722.
