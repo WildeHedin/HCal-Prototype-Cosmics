@@ -4,7 +4,7 @@ In this project I have implemented a geometry description, in the LDMX software,
 ## Geometry implementation
 Two main files have been created and modified during this project: A GDML file, which provides detector information to Geant4, and a python file, which provides detector information to ldmx-sw. These two files can be found in the folder NewGeometry.
 
-## How to run
+## How to generate simulation samples
 ### Generate a LHE-file
 An LHE-file contains initial information about the cosmic muons. 
 
@@ -14,7 +14,7 @@ A simplified description of the Cosmic HCal prototype geometry has been added to
 In addition, several if statesments have been updated because some muons were never assigned a vertex in the previous generators. 
 This is explained a bit better in my thesis. 
 
-### Generate simulation samples
+### Geant4 simulation
 Create a folder that will store the ROOT files:
 
 mkdir cosmicEvents
